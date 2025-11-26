@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletividade Alimentar no Autismo | Seleta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <style>
+        :root {
+            --primary: #2c5aa0;
+            --primary-light: #4a7bc8;
+            --primary-dark: #1a3a6b;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --text: #333333;
+            --text-light: #666666;
+            --text-lighter: #888888;
+            --background: #f8f9fa;
+            --white: #ffffff;
+            --light-bg: #f0f4f8;
+            --border: #eaeaea;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+            font-weight: 400;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text);
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: var(--radius);
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-hero {
+            background-color: var(--white);
+            color: var(--primary);
+            font-weight: 600;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-hero:hover {
+            background-color: var(--light-bg);
+            color: var(--primary-dark);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+
+        .logo-icon i {
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Menu Hamburguer */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 101;
+            margin-left: 1rem;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Cards Section */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon i {
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Quiz Section */
+        .quiz-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-top: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .quiz-form {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.1);
+        }
+
+        .quiz-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .quiz-option {
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: var(--light-bg);
+        }
+
+        .quiz-option.selected {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .quiz-result {
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .quiz-result.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quiz-result.positive {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .quiz-result.attention {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+
+        /* Tips Section */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--accent);
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .tip-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: var(--accent);
+            color: var(--white);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .tip-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .tip-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Relatório Alimentar */
+        .relatorio-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-top: 3rem;
+        }
+
+        .relatorio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .alimentos-lista {
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            min-height: 200px;
+        }
+
+        .alimentos-lista h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .alimentos-lista ul {
+            list-style: none;
+        }
+
+        .alimentos-lista li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .alimentos-lista li:last-child {
+            border-bottom: none;
+        }
+
+        .alimento-acoes {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .alimento-acoes button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .alimento-acoes button:hover {
+            color: var(--secondary);
+        }
+
+        .novo-alimento-form {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .novo-alimento-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .novo-alimento-form input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Comunidade de Relatos */
+        .comunidade-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-top: 3rem;
+        }
+
+        .relatos-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .relato-card {
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+        }
+
+        .relato-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .relato-autor {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .relato-data {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .relato-conteudo {
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .relato-acoes {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .relato-acoes button {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .relato-acoes button:hover {
+            color: var(--primary);
+        }
+
+        .novo-relato-form {
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .novo-relato-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 120px;
+            margin-bottom: 1rem;
+        }
+
+        .novo-relato-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        /* Histórico Section */
+        .historico-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-top: 3rem;
+        }
+
+        .historico-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .historico-stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1rem;
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .historico-lista {
+            min-height: 200px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-light);
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            color: var(--text-lighter);
+            margin-bottom: 1rem;
+        }
+
+        .empty-state h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .empty-state p {
+            margin-bottom: 1.5rem;
+        }
+
+        .avaliacao-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .avaliacao-card:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+
+        .avaliacao-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .avaliacao-info h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.3rem;
+        }
+
+        .avaliacao-info .data {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .avaliacao-pontuacao {
+            text-align: right;
+        }
+
+        .pontuacao-numero {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .pontuacao-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .avaliacao-resultado {
+            padding: 0.8rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .resultado-positivo {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .resultado-atencao {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        .avaliacao-acoes {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: flex-end;
+        }
+
+        .btn-small {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-view {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-view:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-delete {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-delete:hover {
+            background: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+            text-align: center;
+            color: #cccccc;
+        }
+
+        /* Botões flutuantes */
+        .libras-btn,
+        .accessibility-btn,
+        .back-to-top {
+            position: fixed;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-hover);
+            z-index: 999;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .libras-btn {
+            bottom: 20px;
+            left: 20px;
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .libras-btn:hover {
+            background: #e67e22;
+            transform: scale(1.1);
+        }
+
+        .accessibility-btn {
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .accessibility-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        .back-to-top {
+            bottom: 90px;
+            right: 20px;
+            background: var(--accent);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #e67e22;
+            transform: translateY(-5px);
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Animações */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Acessibilidade */
+        .high-contrast {
+            --primary: #000000;
+            --primary-light: #333333;
+            --primary-dark: #000000;
+            --secondary: #ff0000;
+            --accent: #ffff00;
+            --text: #000000;
+            --text-light: #333333;
+            --text-lighter: #666666;
+            --background: #ffffff;
+            --white: #ffffff;
+            --light-bg: #f0f0f0;
+            --border: #000000;
+        }
+
+        .reading-mode {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+        }
+
+        .reading-mode .section-title {
+            font-size: 2.5rem;
+        }
+
+        .reading-mode .section-subtitle {
+            font-size: 1.3rem;
+        }
+
+        /* Focus styles */
+        .btn:focus,
+        .quiz-option:focus,
+        nav a:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav li {
+                margin: 0 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                height: 100vh;
+                background: var(--white);
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: var(--transition);
+                z-index: 100;
+                padding: 5rem 2rem 2rem;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            nav li {
+                margin: 0;
+            }
+            
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+            
+            .relatorio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão de Libras -->
+    <button class="libras-btn" id="libras-btn" title="Ativar Libras">
+        <i class="fas fa-sign-language"></i>
+    </button>
+    
+    <!-- Botão de acessibilidade -->
+    <button class="accessibility-btn" id="accessibility-btn" title="Acessibilidade">
+        <i class="fas fa-universal-access"></i>
+    </button>
+    
+    <!-- Botão de voltar ao topo -->
+    <button class="back-to-top" id="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-area">
+                    <div class="logo">
+                        <div class="logo-icon"><i class="fas fa-heart"></i></div>
+                        <span class="logo-text">Seleta</span>
+                    </div>
+                    
+                    <!-- Menu Hamburguer -->
+                    <div class="menu-toggle" id="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#quiz">Avaliação</a></li>
+                        <li><a href="#dicas">Dicas</a></li>
+                        <li><a href="#relatorio">Relatório</a></li>
+                        <li><a href="#comunidade">Comunidade</a></li>
+                        <li><a href="#historico">Histórico</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Seletividade Alimentar no Autismo</h1>
+                    <p>Compreenda, apoie e transforme a relação com a alimentação de forma respeitosa e eficaz</p>
+                    <div class="hero-buttons">
+                        <a href="#quiz" class="btn btn-hero">
+                            <i class="fas fa-clipboard-check"></i> Fazer Avaliação
+                        </a>
+                        <a href="#dicas" class="btn btn-outline">
+                            <i class="fas fa-lightbulb"></i> Ver Dicas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2 class="section-title">Entendendo a Seletividade Alimentar</h2>
+                <p class="section-subtitle">A seletividade alimentar é comum no autismo e pode ser abordada com estratégias adequadas e muita paciência</p>
+                <div class="cards-grid">
+                    <div class="card fade-in">
+                        <div class="card-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Aspectos Sensoriais</h3>
+                        <p>Pessoas autistas podem ter sensibilidades específicas a texturas, sabores, cheiros e temperaturas dos alimentos.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Rotina e Previsibilidade</h3>
+                        <p>A necessidade de rotina pode influenciar as escolhas alimentares, criando padrões específicos de consumo.</p>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="card-icon"><i class="fas fa-users"></i></div>
+                        <h3>Apoio Familiar</h3>
+                        <p>O envolvimento da família é fundamental para criar um ambiente positivo e acolhedor durante as refeições.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="quiz" class="section" style="background: var(--light-bg);">
+            <div class="container">
+                <h2 class="section-title">Avaliação Rápida</h2>
+                <p class="section-subtitle">Responda algumas perguntas para receber orientações personalizadas</p>
+                <div class="quiz-container">
+                    <div id="quiz-form" class="quiz-form">
+                        <div class="form-group">
+                            <label for="nome-pessoa">Nome da pessoa avaliada:</label>
+                            <input type="text" id="nome-pessoa" required placeholder="Digite o nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="idade-pessoa">Idade:</label>
+                            <input type="number" id="idade-pessoa" required min="1" max="100" placeholder="Digite a idade">
+                        </div>
+                        <button class="btn" id="iniciar-quiz">Iniciar Avaliação</button>
+                    </div>
+                    <div id="quiz-questions" style="display: none;">
+                        <div class="quiz-question" id="current-question"></div>
+                        <div class="quiz-options" id="quiz-options"></div>
+                        <div class="quiz-result" id="quiz-result"></div>
+                        <button class="btn" id="next-question" style="display: none;">Próxima Pergunta</button>
+                        <button class="btn" id="save-result" style="display: none;">
+                            <span class="loading-spinner" id="save-spinner" style="display: none;"></span>
+                            Salvar Avaliação
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="dicas" class="section">
+            <div class="container">
+                <h2 class="section-title">Estratégias Práticas</h2>
+                <p class="section-subtitle">Dicas baseadas em evidências para expandir o repertório alimentar de forma gradual e respeitosa</p>
+                <div class="tips-grid">
+                    <div class="tip-card fade-in">
+                        <div class="tip-number">1</div>
+                        <h4>Exposição Gradual</h4>
+                        <p>Apresente novos alimentos de forma gradual, começando apenas com a visualização, depois o toque, e por fim a degustação.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <div class="tip-number">2</div>
+                        <h4>Ambiente Calmo</h4>
+                        <p>Crie um ambiente tranquilo durante as refeições, evitando pressões e mantendo uma atmosfera positiva.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <div class="tip-number">3</div>
+                        <h4>Modelo Positivo</h4>
+                        <p>Seja um exemplo positivo, demonstrando prazer ao comer diferentes alimentos sem forçar a imitação.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <div class="tip-number">4</div>
+                        <h4>Respeite o Ritmo</h4>
+                        <p>Cada pessoa tem seu próprio ritmo. Respeite os limites e celebre pequenos progressos.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <div class="tip-number">5</div>
+                        <h4>Variedade de Texturas</h4>
+                        <p>Explore diferentes formas de preparar o mesmo alimento para encontrar texturas mais aceitas.</p>
+                    </div>
+                    <div class="tip-card fade-in">
+                        <div class="tip-number">6</div>
+                        <h4>Envolvimento na Preparação</h4>
+                        <p>Inclua a pessoa no processo de preparação dos alimentos quando possível, aumentando a familiaridade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="relatorio" class="section" style="background: var(--light-bg);">
+            <div class="container">
+                <h2 class="section-title">Relatório Alimentar</h2>
+                <p class="section-subtitle">Registre os alimentos que são aceitos e os que apresentam dificuldades</p>
+                <div class="relatorio-container">
+                    <div class="relatorio-grid">
+                        <div class="alimentos-lista">
+                            <h3><i class="fas fa-check-circle"></i> Alimentos Aceitos</h3>
+                            <ul id="alimentos-aceitos"></ul>
+                            <div class="novo-alimento-form">
+                                <input type="text" id="novo-alimento-aceito" placeholder="Adicionar alimento aceito">
+                                <button class="btn btn-small" id="add-alimento-aceito">Adicionar</button>
+                            </div>
+                        </div>
+                        
+                        <div class="alimentos-lista">
+                            <h3><i class="fas fa-times-circle"></i> Alimentos com Dificuldade</h3>
+                            <ul id="alimentos-dificuldade"></ul>
+                            <div class="novo-alimento-form">
+                                <input type="text" id="novo-alimento-dificuldade" placeholder="Adicionar alimento com dificuldade">
+                                <button class="btn btn-small" id="add-alimento-dificuldade">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="historico-header" style="margin-top: 2rem;">
+                        <button class="btn" id="export-relatorio">
+                            <i class="fas fa-download"></i> Exportar Relatório
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="comunidade" class="section">
+            <div class="container">
+                <h2 class="section-title">Comunidade de Relatos</h2>
+                <p class="section-subtitle">Compartilhe experiências e aprenda com outras famílias</p>
+                <div class="comunidade-container">
+                    <div class="relatos-grid" id="relatos-lista"></div>
+                    
+                    <div class="novo-relato-form">
+                        <h3>Compartilhe sua experiência</h3>
+                        <textarea id="novo-relato-texto" placeholder="Compartilhe sua experiência com seletividade alimentar..."></textarea>
+                        <button class="btn" id="add-relato">Publicar Relato</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="historico" class="section" style="background: var(--light-bg);">
+            <div class="container">
+                <h2 class="section-title">Histórico de Avaliações</h2>
+                <p class="section-subtitle">Acompanhe o progresso das avaliações realizadas</p>
+                <div class="historico-container">
+                    <div class="historico-header">
+                        <div class="historico-stats">
+                            <div class="stat-card">
+                                <div class="stat-number" id="total-avaliacoes">0</div>
+                                <div class="stat-label">Avaliações</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" id="media-pontuacao">0</div>
+                                <div class="stat-label">Pontuação Média</div>
+                            </div>
+                        </div>
+                        <button class="btn" id="export-dados">
+                            <i class="fas fa-download"></i> Exportar Dados
+                        </button>
+                    </div>
+                    <div class="historico-lista" id="historico-lista">
+                        <div class="empty-state" id="empty-state">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h3>Nenhuma avaliação realizada</h3>
+                            <p>Faça sua primeira avaliação para começar a acompanhar o progresso.</p>
+                            <a href="#quiz" class="btn">Fazer Avaliação</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre o Seleta</h3>
+                    <p>Dedicados a fornecer informações e apoio para famílias e profissionais que trabalham com autismo e seletividade alimentar.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>📧 seleta67@gmail.com</p>
+                    
+                    <p>📱 (99) 98197-1876</p>
+                    <p>📷 @seleta_autismo</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <p><a href="#quiz">Avaliação Online</a></p>
+                    <p><a href="#dicas">Dicas Práticas</a></p>
+                    <p><a href="#relatorio">Relatório Alimentar</a></p>
+                    <p><a href="#comunidade">Comunidade</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Seleta. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal de acessibilidade -->
+    <div class="modal" id="accessibility-modal">
+        <div class="modal-content" style="max-width: 500px; background: var(--white); padding: 2rem; border-radius: var(--radius);">
+            <button class="modal-close" id="close-accessibility">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 style="margin-bottom: 1.5rem; color: var(--primary);">Opções de Acessibilidade</h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <button class="btn" id="high-contrast">
+                    <i class="fas fa-adjust"></i> Alto Contraste
+                </button>
+                <button class="btn" id="reading-mode">
+                    <i class="fas fa-book-open"></i> Modo de Leitura
+                </button>
+                <button class="btn" id="increase-font">
+                    <i class="fas fa-text-height"></i> Aumentar Fonte
+                </button>
+                <button class="btn" id="decrease-font">
+                    <i class="fas fa-text-width"></i> Diminuir Fonte
+                </button>
+                <button class="btn" id="reset-accessibility">
+                    <i class="fas fa-undo"></i> Redefinir
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Widget VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Sistema de gerenciamento de dados
+        class DataManager {
+            constructor() {
+                this.avaliacoes = JSON.parse(localStorage.getItem('avaliacoes')) || [];
+                this.alimentosAceitos = JSON.parse(localStorage.getItem('alimentosAceitos')) || [];
+                this.alimentosDificuldade = JSON.parse(localStorage.getItem('alimentosDificuldade')) || [];
+                this.relatos = JSON.parse(localStorage.getItem('relatos')) || [];
+            }
+
+            saveAvaliacoes() {
+                localStorage.setItem('avaliacoes', JSON.stringify(this.avaliacoes));
+            }
+
+            saveAlimentosAceitos() {
+                localStorage.setItem('alimentosAceitos', JSON.stringify(this.alimentosAceitos));
+            }
+
+            saveAlimentosDificuldade() {
+                localStorage.setItem('alimentosDificuldade', JSON.stringify(this.alimentosDificuldade));
+            }
+
+            saveRelatos() {
+                localStorage.setItem('relatos', JSON.stringify(this.relatos));
+            }
+        }
+
+        // Sistema do Quiz
+        class QuizManager {
+            constructor() {
+                this.questions = [
+                    {
+                        question: "Quantos alimentos diferentes a pessoa consome regularmente?",
+                        options: [
+                            { text: "Menos de 5 alimentos", subtext: "Dieta muito restrita", value: "menos-5", pontos: 1 },
+                            { text: "Entre 5 e 15 alimentos", subtext: "Seletividade moderada", value: "5-15", pontos: 2 },
+                            { text: "Mais de 15 alimentos", subtext: "Variedade razoável", value: "mais-15", pontos: 3 }
+                        ]
+                    },
+                    {
+                        question: "Como a pessoa reage a novos alimentos?",
+                        options: [
+                            { text: "Recusa completamente", subtext: "Não aceita experimentar", value: "recusa-total", pontos: 1 },
+                            { text: "Aceita tocar/cheirar", subtext: "Mostra alguma curiosidade", value: "aceita-explorar", pontos: 2 },
+                            { text: "Experimenta pequenas quantidades", subtext: "Disposta a tentar", value: "experimenta", pontos: 3 }
+                        ]
+                    },
+                    {
+                        question: "Qual é a principal dificuldade observada?",
+                        options: [
+                            { text: "Texturas específicas", subtext: "Problemas sensoriais", value: "texturas", pontos: 1 },
+                            { text: "Sabores novos", subtext: "Resistência ao desconhecido", value: "sabores", pontos: 2 },
+                            { text: "Mudanças na rotina", subtext: "Necessidade de previsibilidade", value: "rotina", pontos: 1 }
+                        ]
+                    }
+                ];
+                
+                this.currentQuestionIndex = 0;
+                this.answers = [];
+                this.currentData = {};
+            }
+
+            start(nome, idade) {
+                this.currentData = {
+                    nome: nome,
+                    idade: parseInt(idade),
+                    respostas: [],
+                    pontuacao: 0
+                };
+                
+                this.currentQuestionIndex = 0;
+                this.answers = [];
+                this.loadQuestion(0);
+            }
+
+            selectOption(element, value) {
+                const options = document.querySelectorAll('.quiz-option');
+                options.forEach(opt => opt.classList.remove('selected'));
+                
+                element.classList.add('selected');
+                
+                const currentQuestion = this.questions[this.currentQuestionIndex];
+                const selectedOption = currentQuestion.options.find(opt => opt.value === value);
+                
+                this.answers[this.currentQuestionIndex] = {
+                    pergunta: currentQuestion.question,
+                    resposta: selectedOption.text,
+                    valor: value,
+                    pontos: selectedOption.pontos
+                };
+                
+                document.getElementById('next-question').style.display = 'inline-block';
+            }
+
+            nextQuestion() {
+                this.currentQuestionIndex++;
+                
+                if (this.currentQuestionIndex < this.questions.length) {
+                    this.loadQuestion(this.currentQuestionIndex);
+                } else {
+                    this.showResults();
+                }
+            }
+
+            loadQuestion(index) {
+                const question = this.questions[index];
+                
+                document.getElementById('current-question').textContent = question.question;
+                
+                const optionsContainer = document.getElementById('quiz-options');
+                optionsContainer.innerHTML = '';
+                
+                question.options.forEach(option => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'quiz-option';
+                    optionDiv.onclick = () => this.selectOption(optionDiv, option.value);
+                    optionDiv.innerHTML = `
+                        <strong>${option.text}</strong><br>
+                        <small>${option.subtext}</small>
+                    `;
+                    optionsContainer.appendChild(optionDiv);
+                });
+                
+                document.getElementById('next-question').style.display = 'none';
+                document.getElementById('quiz-result').classList.remove('show');
+            }
+
+            showResults() {
+                const resultDiv = document.getElementById('quiz-result');
+                const nextButton = document.getElementById('next-question');
+                const saveButton = document.getElementById('save-result');
+                
+                const totalPontos = this.answers.reduce((sum, answer) => sum + answer.pontos, 0);
+                this.currentData.pontuacao = totalPontos;
+                this.currentData.respostas = JSON.stringify(this.answers);
+                
+                let resultText = '';
+                let resultClass = '';
+                let resultado = '';
+                let recomendacoes = '';
+                
+                if (totalPontos <= 4) {
+                    resultClass = 'attention';
+                    resultado = 'Atenção Necessária';
+                    recomendacoes = 'Consultar profissional especializado; Implementar estratégias graduais; Manter ambiente calmo; Focar na qualidade nutricional';
+                    resultText = `
+                        <h3><i class="fas fa-exclamation-triangle"></i> Atenção Necessária</h3>
+                        <p><strong>Pontuação: ${totalPontos}/9</strong></p>
+                        <p>Os resultados indicam uma seletividade alimentar significativa. Recomendamos:</p>
+                        <ul>
+                            <li>Consultar um profissional especializado</li>
+                            <li>Implementar estratégias graduais de exposição</li>
+                            <li>Manter um ambiente calmo durante as refeições</li>
+                            <li>Focar na qualidade nutricional dos alimentos aceitos</li>
+                        </ul>
+                    `;
+                } else if (totalPontos <= 6) {
+                    resultClass = 'attention';
+                    resultado = 'Seletividade Moderada';
+                    recomendacoes = 'Continuar exposição gradual; Celebrar progressos; Manter paciência; Considerar apoio profissional';
+                    resultText = `
+                        <h3><i class="fas fa-info-circle"></i> Seletividade Moderada</h3>
+                        <p><strong>Pontuação: ${totalPontos}/9</strong></p>
+                        <p>Há sinais de seletividade moderada. Recomendamos:</p>
+                        <ul>
+                            <li>Continuar com exposição gradual a novos alimentos</li>
+                            <li>Celebrar pequenos progressos</li>
+                            <li>Manter paciência e consistência</li>
+                            <li>Considerar apoio profissional se necessário</li>
+                        </ul>
+                    `;
+                } else {
+                    resultClass = 'positive';
+                    resultado = 'Situação Promissora';
+                    recomendacoes = 'Manter exposição gradual; Celebrar progressos; Criar experiências positivas; Respeitar o ritmo individual';
+                    resultText = `
+                        <h3><i class="fas fa-check-circle"></i> Situação Promissora</h3>
+                        <p><strong>Pontuação: ${totalPontos}/9</strong></p>
+                        <p>Os resultados mostram uma situação mais favorável. Continue:</p>
+                        <ul>
+                            <li>Mantendo a exposição gradual a novos alimentos</li>
+                            <li>Celebrando pequenos progressos</li>
+                            <li>Criando experiências positivas com comida</li>
+                            <li>Respeitando o ritmo individual</li>
+                        </ul>
+                    `;
+                }
+                
+                this.currentData.resultado = resultado;
+                this.currentData.recomendacoes = recomendacoes;
+                
+                resultDiv.innerHTML = resultText;
+                resultDiv.className = `quiz-result show ${resultClass}`;
+                
+                nextButton.style.display = 'none';
+                saveButton.style.display = 'inline-block';
+            }
+
+            save(dataManager) {
+                const avaliacaoData = {
+                    id: Date.now().toString(),
+                    nome: this.currentData.nome,
+                    idade: this.currentData.idade,
+                    respostas: this.currentData.respostas,
+                    resultado: this.currentData.resultado,
+                    recomendacoes: this.currentData.recomendacoes,
+                    data_avaliacao: new Date().toISOString(),
+                    pontuacao: this.currentData.pontuacao
+                };
+                
+                dataManager.avaliacoes.push(avaliacaoData);
+                dataManager.saveAvaliacoes();
+                return true;
+            }
+
+            restart() {
+                this.currentQuestionIndex = 0;
+                this.answers = [];
+                this.currentData = {};
+                
+                document.getElementById('quiz-questions').style.display = 'none';
+                document.getElementById('quiz-form').style.display = 'block';
+                document.getElementById('quiz-result').classList.remove('show');
+                document.getElementById('save-result').style.display = 'none';
+                
+                document.getElementById('nome-pessoa').value = '';
+                document.getElementById('idade-pessoa').value = '';
+            }
+        }
+
+        // Sistema de Interface
+        class InterfaceManager {
+            constructor(dataManager, quizManager) {
+                this.dataManager = dataManager;
+                this.quizManager = quizManager;
+            }
+
+            init() {
+                this.initMenuToggle();
+                this.initIntersectionObserver();
+                this.initBackToTop();
+                this.initAccessibility();
+                this.initVLibras();
+                this.initEventListeners();
+                this.updateHistorico();
+                this.updateStats();
+                this.updateAlimentos();
+                this.updateRelatos();
+                
+                // Smooth scrolling
+                document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+                        if (targetSection) {
+                            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
+                });
+            }
+
+            initMenuToggle() {
+                const menuToggle = document.getElementById('menu-toggle');
+                const nav = document.getElementById('main-nav');
+                
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    nav.classList.toggle('active');
+                });
+                
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.classList.remove('active');
+                        nav.classList.remove('active');
+                    });
+                });
+            }
+
+            initIntersectionObserver() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                document.querySelectorAll('.fade-in').forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            initBackToTop() {
+                const backToTopBtn = document.getElementById('back-to-top');
+                
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopBtn.classList.add('visible');
+                    } else {
+                        backToTopBtn.classList.remove('visible');
+                    }
+                });
+                
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            initAccessibility() {
+                document.getElementById('accessibility-btn').addEventListener('click', () => {
+                    document.getElementById('accessibility-modal').style.display = 'flex';
+                });
+
+                document.getElementById('close-accessibility').addEventListener('click', () => {
+                    document.getElementById('accessibility-modal').style.display = 'none';
+                });
+
+                document.getElementById('high-contrast').addEventListener('click', () => {
+                    document.body.classList.toggle('high-contrast');
+                    this.showMessage('Modo de alto contraste ' + 
+                        (document.body.classList.contains('high-contrast') ? 'ativado' : 'desativado'), 'success');
+                });
+
+                document.getElementById('reading-mode').addEventListener('click', () => {
+                    document.body.classList.toggle('reading-mode');
+                    this.showMessage('Modo de leitura ' + 
+                        (document.body.classList.contains('reading-mode') ? 'ativado' : 'desativado'), 'success');
+                });
+
+                document.getElementById('increase-font').addEventListener('click', () => {
+                    const currentSize = parseFloat(getComputedStyle(document.body).fontSize);
+                    document.body.style.fontSize = (currentSize + 2) + 'px';
+                    this.showMessage('Fonte aumentada', 'success');
+                });
+
+                document.getElementById('decrease-font').addEventListener('click', () => {
+                    const currentSize = parseFloat(getComputedStyle(document.body).fontSize);
+                    if (currentSize > 12) {
+                        document.body.style.fontSize = (currentSize - 2) + 'px';
+                        this.showMessage('Fonte diminuída', 'success');
+                    }
+                });
+
+                document.getElementById('reset-accessibility').addEventListener('click', () => {
+                    document.body.classList.remove('high-contrast', 'reading-mode');
+                    document.body.style.fontSize = '';
+                    this.showMessage('Configurações redefinidas', 'success');
+                });
+            }
+
+            initVLibras() {
+                const librasBtn = document.getElementById('libras-btn');
+                
+                librasBtn.addEventListener('click', () => {
+                    const vlibrasBtn = document.querySelector('.vw-access-button');
+                    if (vlibrasBtn) {
+                        vlibrasBtn.click();
+                        this.showMessage('VLibras ativado!', 'success');
+                    } else {
+                        this.showMessage('Recurso de Libras não disponível', 'error');
+                    }
+                });
+            }
+
+            initEventListeners() {
+                // Quiz
+                document.getElementById('iniciar-quiz').addEventListener('click', () => {
+                    const nome = document.getElementById('nome-pessoa').value.trim();
+                    const idade = document.getElementById('idade-pessoa').value;
+                    
+                    if (!nome || !idade) {
+                        this.showMessage('Por favor, preencha todos os campos.', 'error');
+                        return;
+                    }
+                    
+                    document.getElementById('quiz-form').style.display = 'none';
+                    document.getElementById('quiz-questions').style.display = 'block';
+                    
+                    this.quizManager.start(nome, idade);
+                });
+
+                document.getElementById('next-question').addEventListener('click', () => {
+                    this.quizManager.nextQuestion();
+                });
+
+                document.getElementById('save-result').addEventListener('click', () => {
+                    const saveButton = document.getElementById('save-result');
+                    const spinner = document.getElementById('save-spinner');
+                    
+                    saveButton.disabled = true;
+                    spinner.style.display = 'inline-block';
+                    saveButton.innerHTML = '<span class="loading-spinner"></span> Salvando...';
+                    
+                    setTimeout(() => {
+                        try {
+                            if (this.quizManager.save(this.dataManager)) {
+                                this.showMessage('Avaliação salva com sucesso!', 'success');
+                                this.quizManager.restart();
+                                this.updateHistorico();
+                                this.updateStats();
+                            }
+                        } catch (error) {
+                            this.showMessage('Erro ao salvar avaliação. Tente novamente.', 'error');
+                        } finally {
+                            saveButton.disabled = false;
+                            spinner.style.display = 'none';
+                            saveButton.innerHTML = 'Salvar Avaliação';
+                        }
+                    }, 1000);
+                });
+
+                // Alimentos
+                document.getElementById('add-alimento-aceito').addEventListener('click', () => {
+                    this.adicionarAlimento('aceito');
+                });
+
+                document.getElementById('add-alimento-dificuldade').addEventListener('click', () => {
+                    this.adicionarAlimento('dificuldade');
+                });
+
+                // Relatos
+                document.getElementById('add-relato').addEventListener('click', () => {
+                    this.adicionarRelato();
+                });
+
+                // Exportações
+                document.getElementById('export-relatorio').addEventListener('click', () => {
+                    this.exportarRelatorio();
+                });
+
+                document.getElementById('export-dados').addEventListener('click', () => {
+                    this.exportarDados();
+                });
+            }
+
+            adicionarAlimento(tipo) {
+                const inputId = tipo === 'aceito' ? 'novo-alimento-aceito' : 'novo-alimento-dificuldade';
+                const input = document.getElementById(inputId);
+                const alimento = input.value.trim();
+                
+                if (!alimento) {
+                    this.showMessage('Por favor, digite um alimento.', 'error');
+                    return;
+                }
+                
+                if (tipo === 'aceito') {
+                    this.dataManager.alimentosAceitos.push(alimento);
+                    this.dataManager.saveAlimentosAceitos();
+                } else {
+                    this.dataManager.alimentosDificuldade.push(alimento);
+                    this.dataManager.saveAlimentosDificuldade();
+                }
+                
+                this.updateAlimentos();
+                input.value = '';
+                this.showMessage('Alimento adicionado com sucesso!', 'success');
+            }
+
+            removerAlimento(tipo, index) {
+                if (tipo === 'aceito') {
+                    this.dataManager.alimentosAceitos.splice(index, 1);
+                    this.dataManager.saveAlimentosAceitos();
+                } else {
+                    this.dataManager.alimentosDificuldade.splice(index, 1);
+                    this.dataManager.saveAlimentosDif
